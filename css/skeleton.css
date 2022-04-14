@@ -1,4 +1,189 @@
 @charset "UTF-8";
+.c-1 {
+  height: 1px;
+  width: 40%;
+  margin: -8px 0;
+  background-color: #1EAEDB;
+  position: absolute;
+}
+.c-1::before {
+  content: "";
+  position: absolute;
+  background-color: #1EAEDB;
+  transition: 0.7s;
+  height: 10px;
+  transform: rotate(45deg);
+  width: 1px;
+  top: -1px;
+  left: -4px;
+}
+.c-1::after {
+  content: "";
+  position: absolute;
+  background-color: #1EAEDB;
+  transition: 0.7s;
+  height: 14px;
+  transform: rotate(45deg);
+  width: 1px;
+  top: -11px;
+  right: -5px;
+}
+
+.c-2 {
+  height: 1px;
+  width: 20%;
+  margin: -8px 0;
+  background-color: #1EAEDB;
+  position: absolute;
+}
+.c-2::before {
+  content: "";
+  position: absolute;
+  background-color: #1EAEDB;
+  transition: 0.7s;
+  height: 10px;
+  transform: rotate(-45deg);
+  width: 1px;
+  top: -8px;
+  left: -4px;
+}
+.c-2::after {
+  content: "";
+  position: absolute;
+  background-color: #1EAEDB;
+  transition: 0.7s;
+  height: 14px;
+  transform: rotate(45deg);
+  width: 1px;
+  top: -11px;
+  right: -5px;
+}
+
+button .cb-1 {
+  transition: 0.7s;
+  height: 1px;
+  width: 30%;
+  right: 0;
+  bottom: -8px;
+  background-color: #1EAEDB;
+  position: absolute;
+}
+button .cb-1::after {
+  content: "";
+  position: absolute;
+  background-color: #1EAEDB;
+  transition: 0.7s;
+  transform: rotate(45deg);
+  height: 14px;
+  width: 1px;
+  top: -11px;
+  right: -5px;
+}
+button .cb-1::before {
+  content: "";
+  position: absolute;
+  background-color: #1EAEDB;
+  transition: 0.7s;
+  height: 1px;
+  width: 20px;
+  top: -9px;
+  right: -29px;
+}
+button .cb-2 {
+  transition: 0.7s;
+  height: 1px;
+  width: 30%;
+  left: 14%;
+  top: -8px;
+  background-color: #1EAEDB;
+  position: absolute;
+}
+button .cb-2::after {
+  content: "";
+  position: absolute;
+  background-color: #1EAEDB;
+  transition: 0.7s;
+  transform: rotate(45deg);
+  height: 14px;
+  width: 1px;
+  top: -11px;
+  right: -5px;
+}
+button .cb-2::before {
+  content: "";
+  position: absolute;
+  background-color: #1EAEDB;
+  transition: 0.7s;
+  height: 1px;
+  width: 20px;
+  top: -9px;
+  right: -29px;
+}
+button .cb-3 {
+  transition: 0.7s;
+  background-color: #1EAEDB;
+  width: 10%;
+  height: 1px;
+  margin-top: 4px;
+  left: 10%;
+}
+button .cb-3::after {
+  content: "";
+  position: absolute;
+  background-color: #1EAEDB;
+  transition: 0.7s;
+  height: 1px;
+  width: 15px;
+  margin-left: 0px;
+}
+button:hover .cb-1 {
+  height: 1px;
+  width: 30%;
+  right: 0;
+  bottom: -8px;
+}
+button:hover .cb-1::after {
+  height: 14px;
+  width: 1px;
+  top: -11px;
+  right: -5px;
+}
+button:hover .cb-1::before {
+  height: 1px;
+  width: 20px;
+  top: -9px;
+  right: -29px;
+}
+button:hover .cb-2 {
+  height: 1px;
+  width: 24%;
+  left: 20%;
+  top: -8px;
+}
+button:hover .cb-2::after {
+  height: 14px;
+  width: 1px;
+  top: -11px;
+  right: -5px;
+}
+button:hover .cb-2::before {
+  height: 1px;
+  width: 38px;
+  top: -9px;
+  right: -47px;
+}
+button:hover .cb-3 {
+  background-color: #1EAEDB;
+  width: 20%;
+  height: 1px;
+  margin-left: -15%;
+}
+button:hover .cb-3::after {
+  height: 1px;
+  width: 20px;
+  margin-left: 40px;
+}
+
 /*
 * Skeleton V2.0.4
 * Copyright 2014, Dave Gamache
@@ -216,7 +401,7 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #444;
+  color: #1EAEDB;
 }
 
 /* Typography
@@ -311,9 +496,10 @@ input[type=submit],
 input[type=reset],
 input[type=button] {
   display: inline-block;
+  position: relative;
   height: 38px;
   padding: 0 30px;
-  color: #888;
+  color: #1EAEDB;
   text-align: center;
   font-size: 11px;
   font-weight: 600;
@@ -324,9 +510,39 @@ input[type=button] {
   white-space: nowrap;
   background-color: transparent;
   border-radius: 2px;
-  border: 1px solid #bbb;
+  border: 1px solid #1EAEDB;
   cursor: pointer;
   box-sizing: border-box;
+}
+.button::before,
+button::before,
+input[type=submit]::before,
+input[type=reset]::before,
+input[type=button]::before {
+  transition: 0.7s;
+  border-radius: 10px;
+  content: "";
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  background-color: #1EAEDB;
+  left: -8px;
+  top: 0px;
+}
+.button::after,
+button::after,
+input[type=submit]::after,
+input[type=reset]::after,
+input[type=button]::after {
+  transition: 0.7s;
+  border-radius: 10px;
+  content: "";
+  width: 50%;
+  height: 1px;
+  position: absolute;
+  background-color: #1EAEDB;
+  right: 0px;
+  top: -8px;
 }
 
 .button:hover,
@@ -340,9 +556,39 @@ input[type=submit]:focus,
 input[type=reset]:focus,
 input[type=button]:focus {
   color: #000;
-  border-color: #aaa;
-  background-color: #aaa;
+  border-color: #1EAEDB;
+  background-color: #1EAEDB;
   outline: 0;
+}
+.button:hover::before,
+button:hover::before,
+input[type=submit]:hover::before,
+input[type=reset]:hover::before,
+input[type=button]:hover::before,
+.button:focus::before,
+button:focus::before,
+input[type=submit]:focus::before,
+input[type=reset]:focus::before,
+input[type=button]:focus::before {
+  height: 60%;
+  width: 1px;
+  left: -8px;
+  top: 0px;
+}
+.button:hover::after,
+button:hover::after,
+input[type=submit]:hover::after,
+input[type=reset]:hover::after,
+input[type=button]:hover::after,
+.button:focus::after,
+button:focus::after,
+input[type=submit]:focus::after,
+input[type=reset]:focus::after,
+input[type=button]:focus::after {
+  width: 30%;
+  height: 1px;
+  right: 0px;
+  top: -8px;
 }
 
 .button.button-primary,
@@ -351,8 +597,8 @@ input[type=submit].button-primary,
 input[type=reset].button-primary,
 input[type=button].button-primary {
   color: #FFF;
-  background-color: #33C3F0;
-  border-color: #33C3F0;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB;
 }
 
 .button.button-primary:hover,
@@ -384,11 +630,23 @@ select {
   height: 38px;
   padding: 6px 10px;
   /* The 6px vertically centers text on FF, ignored by Webkit */
-  background-color: #fff;
-  border: 1px solid #D1D1D1;
+  background-color: transparent;
+  color: #1EAEDB;
+  border: 1px solid #1EAEDB;
   border-radius: 2px;
   box-shadow: none;
   box-sizing: border-box;
+}
+input[type=email]::placeholder,
+input[type=number]::placeholder,
+input[type=search]::placeholder,
+input[type=text]::placeholder,
+input[type=tel]::placeholder,
+input[type=url]::placeholder,
+input[type=password]::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: #538493;
 }
 
 /* Removes awkward default styles on some inputs for iOS */
@@ -420,7 +678,7 @@ input[type=url]:focus,
 input[type=password]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #33C3F0;
+  border: 1px solid #1EAEDB;
   outline: 0;
 }
 
@@ -481,8 +739,8 @@ code {
   margin: 0 0.2rem;
   font-size: 90%;
   white-space: nowrap;
-  background: #F1F1F1;
-  border: 1px solid #E1E1E1;
+  background: #1EAEDB;
+  border: 1px solid #1EAEDB;
   border-radius: 2px;
 }
 
@@ -498,7 +756,7 @@ th,
 td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid #1EAEDB;
 }
 
 th:first-child,
@@ -563,7 +821,7 @@ hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
   border-width: 0;
-  border-top: 1px solid #E1E1E1;
+  border-top: 1px solid #1EAEDB;
 }
 
 /* Clearing
