@@ -1,0 +1,27 @@
+$primary-color: #1EAEDB;
+$primary-color-dimmed: #538493;
+
+.modal-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.5);
+  backdrop-filter: blur(1px);
+  display: flex;
+  align-items: center;
+  &.hide {
+    display: none;
+  }
+  .modal {
+    position: absolute;
+    z-index: 2;
+    &-card {
+      margin: auto;
+      width: 200px;
+      height: 200px;
+      background-color: $primary-color-dimmed;
+    }
+  }
+}

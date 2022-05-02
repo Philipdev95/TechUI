@@ -184,6 +184,31 @@ button:hover .cb-3::after {
   margin-left: 40px;
 }
 
+.modal-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1px);
+  display: flex;
+  align-items: center;
+}
+.modal-container.hide {
+  display: none;
+}
+.modal-container .modal {
+  position: absolute;
+  z-index: 2;
+}
+.modal-container .modal-card {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  background-color: #538493;
+}
+
 /*
 * Skeleton V2.0.4
 * Copyright 2014, Dave Gamache
