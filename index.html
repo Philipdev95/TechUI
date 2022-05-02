@@ -59,8 +59,8 @@
           <span class="label-body">Send a copy to yourself</span>
         </label>
       </form>
-      <button>
-        This is a button
+      <button id="modal-opener">
+        Open modal
         <div class="cb-2"></div>
         <div class="cb-3"></div>
       </button>
@@ -72,15 +72,21 @@
     </div>
   </div>
   <div class="modal-container" id="modal-container">
-    <div class="modal-card">Modal</div>
+    <div class="modal modal-card">
+      <h1>Modal title</h1>
+      <p>Modal text about modals and stuff like this. Roust roust roust.</p>
+    </div>
   </div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <script>
+    const openModal = document.getElementById('modal-opener');
     const mdlctnr = document.getElementById('modal-container');
-    console.log(mdlctnr)
+    openModal.addEventListener('click', function () {
+      mdlctnr.classList.remove('hide')
+    });
     mdlctnr.addEventListener('click', function () {
       mdlctnr.classList.add('hide')
     });
