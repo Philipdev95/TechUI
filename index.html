@@ -82,25 +82,26 @@
       <p>Modal text about modals and stuff like this. 2 pounds of kapouw. Roust rousting roust.</p>
     </div>
   </div>
+  <div id="modal-dismiss" class="hide"></div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <script>
     const openModal = document.getElementById('modal-opener');
-    const mdlctnr = document.getElementById('modal-container');
+    const mdlctnr = document.getElementById('modal-dismiss');
     const nextCard = document.getElementById('next-1');
 
     nextCard.addEventListener('click', function () {
-      document.getElementById('modal-card-1').classList.add('hide')
-      document.getElementById('modal-card-2').classList.remove('hide')
+      document.getElementById('modal-card-1').classList.add('hide');
+      document.getElementById('modal-card-2').classList.remove('hide');
     });
     openModal.addEventListener('click', function () {
-      mdlctnr.classList.remove('hide')
-      document.getElementById('modal-card-1').classList.remove('hide')
+      mdlctnr.classList.remove('hide');
+      document.getElementById('modal-card-1').classList.remove('hide');
     });
     mdlctnr.addEventListener('click', function () {
-      mdlctnr.classList.add('hide')
+      mdlctnr.classList.add('hide');
     });
   </script>
 </body>
