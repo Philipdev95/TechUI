@@ -71,10 +71,15 @@
 
     </div>
   </div>
-  <div class="modal-container" id="modal-container">
-    <div class="modal modal-card">
-      <h1>Modal title</h1>
+  <div class="modal-container hide" id="modal-container">
+    <div id="modal-card-1" class="modal modal-card hide">
+      <h1>Modal One 1</h1>
       <p>Modal text about modals and stuff like this. Roust roust roust.</p>
+      <button id="next-1">Next</button>
+    </div>
+    <div id="modal-card-2" class="modal modal-card hide">
+      <h1>Modal Two 2</h1>
+      <p>Modal text about modals and stuff like this. 2 pounds of kapouw. Roust rousting roust.</p>
     </div>
   </div>
 
@@ -84,8 +89,15 @@
   <script>
     const openModal = document.getElementById('modal-opener');
     const mdlctnr = document.getElementById('modal-container');
+    const nextCard = document.getElementById('next-1');
+
+    nextCard.addEventListener('click', function () {
+      document.getElementById('modal-card-1').classList.add('hide')
+      document.getElementById('modal-card-2').classList.remove('hide')
+    });
     openModal.addEventListener('click', function () {
       mdlctnr.classList.remove('hide')
+      document.getElementById('modal-card-1').classList.remove('hide')
     });
     mdlctnr.addEventListener('click', function () {
       mdlctnr.classList.add('hide')

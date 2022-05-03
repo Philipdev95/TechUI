@@ -15,7 +15,7 @@ $primary-color-dimmed: #538493;
     display: none;
   }
   .modal {
-    z-index: 2;
+    z-index: 3;
     border-radius: 10px;
     padding: 10px;
     background-color: #111;
@@ -25,6 +25,9 @@ $primary-color-dimmed: #538493;
       margin: auto;
       width: 200px;
       max-height: 80vh;
+      &.hide {
+        display: none;
+      }
     }
   }
 }
